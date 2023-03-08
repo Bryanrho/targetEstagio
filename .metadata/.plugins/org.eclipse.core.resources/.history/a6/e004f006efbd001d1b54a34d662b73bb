@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		String answer = "O número informado não pertence à sequencia";
+		int before = 0;
+		int now = 0;
+		if (now == x) {
+			answer = "O número informado pertence à sequencia";
+		}
+		now = 1;
+		for (int i = 0; i <= x * 2; i++) {			
+			now = before + now;
+			before = now;
+			System.out.println(before + " "+ now);
+		}
+
+		System.out.println(answer);
+		sc.close();
+	}
+
+}

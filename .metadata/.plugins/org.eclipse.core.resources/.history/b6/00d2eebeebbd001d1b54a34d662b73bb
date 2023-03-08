@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		int[] fibo = new int[x];
+		String answer = "O número informado não pertence à sequencia";
+
+		for (int i = 0; i <= x; i++) {
+			if (i == 0) {
+				fibo[i] = i;
+			} else {
+				fibo[i] = fibo[i - 1] + i;
+			}
+			fibo[i] = fibo[i - 1] + i;
+			if (fibo[i] == x) {
+				answer = "O número informado pertence à sequencia";
+			}
+		}
+
+		System.out.println(answer);
+		sc.close();
+	}
+
+}
